@@ -1,0 +1,58 @@
+b	rupture de série
+bc	rupture de série, confidentiel
+bcd	rupture de série, confidentiel, définition différente (voir métadonnées)
+bd	rupture de série, définition différente (voir métadonnées)
+bde	rupture de série, définition différente (voir métadonnées), estimé
+bdep	rupture de série, définition différente (voir métadonnées), estimé, provisoire
+bder	rupture de série, définition différente (voir métadonnées), estimé, révisé
+bdf	rupture de série, définition différente (voir métadonnées), prévision
+bdn	rupture de série, définition différente (voir métadonnées), non significatif
+bdp	rupture de série, définition différente (voir métadonnées), provisoire
+bdps	rupture de série, définition différente (voir métadonnées), provisoire, estimation Eurostat
+bdr	rupture de série, définition différente (voir métadonnées), révisé
+bdrs	rupture de série, définition différente (voir métadonnées), révisé, estimation Eurostat
+bds	rupture de série, définition différente (voir métadonnées), estimation Eurostat
+bdu	rupture de série, définition différente (voir métadonnées), peu fiable
+bdz	rupture de série, définition différente (voir métadonnées), non applicable
+be	rupture de série, estimé
+bep	rupture de série, estimé, provisoire
+ber	rupture de série, estimé, révisé
+bf	rupture de série, prévision
+bn	rupture de série, non significatif
+bp	rupture de série, provisoire
+bps	rupture de série, provisoire, estimation Eurostat
+bpu	rupture de série, provisoire, peu fiable
+br	rupture de série, révisé
+brs	rupture de série, révisé, estimation Eurostat
+bs	rupture de série, estimation Eurostat
+bu	rupture de série, peu fiable
+bz	rupture de série, non applicable
+c	confidentiel
+cd	confidentiel, définition différente (voir métadonnées)
+d	définition différente (voir métadonnées)
+de	définition différente (voir métadonnées), estimé
+dep	définition différente (voir métadonnées), estimé, provisoire
+der	définition différente (voir métadonnées), estimé, révisé
+df	définition différente (voir métadonnées), prévision
+dn	définition différente (voir métadonnées), non significatif
+dp	définition différente (voir métadonnées), provisoire
+dps	définition différente (voir métadonnées), provisoire, estimation Eurostat
+dpu	définition différente (voir métadonnées), provisoire, peu fiable
+dr	définition différente (voir métadonnées), révisé
+drs	définition différente (voir métadonnées), révisé, estimation Eurostat
+ds	définition différente (voir métadonnées), estimation Eurostat
+du	définition différente (voir métadonnées), peu fiable
+dz	définition différente (voir métadonnées), non applicable
+e	estimé
+ep	estimé, provisoire
+er	estimé, révisé
+f	prévision
+n	non significatif
+p	provisoire
+ps	provisoire, estimation Eurostat
+pu	provisoire, peu fiable
+r	révisé
+rs	révisé, estimation Eurostat
+s	estimation Eurostat
+u	peu fiable
+z	non applicable

@@ -1,0 +1,190 @@
+TOTAL	Total
+CRE_DEB_AVG	Moyenne des crédits et débits
+CRE_DEB_SUM	Somme des crédits et débits
+CRE	Crédit
+DEB	Débit
+LOAN	Prêt
+DPT	Dépôt
+NET	Net
+PRD	Production
+PRD_U	Production utilisable
+RESASS_MAU	Actifs de réserve, y compris l’or monétaire
+ASS	Avoirs
+AD	Ventes brutes d'actifs
+AI	Acquisitions brutes d'actifs
+LIAB	Engagements
+LD	Diminution brute des passifs
+LI	Accroissement brut des passifs
+IMP	Importations
+IMP_IEU27_2020	Importations intra-UE27 (à partir de 2020)
+IMP_IEU28	Importations intra-UE28 (2013-2020)
+IMP_XEU	Importations de pays hors UE
+IMP_XEU27_2020	Importations extra-UE27 (à partir de 2020)
+IMP_XEU28	Importations extra-UE28 (2013-2020)
+EXP	Exportations
+EXP_IEU27_2020	Exportations intra-UE27 (à partir de 2020)
+EXP_IEU28	Exportations intra-UE28 (2013-2020)
+EXP_XEU	Exportations vers pays hors UE
+EXP_XEU27_2020	Exportations extra-UE27 (à partir de 2020)
+EXP_XEU28	Exportations extra-UE28 (2013-2020)
+BAL	Solde
+BAL_RT	Solde des valeurs / Ratio des indices
+BAL_TRD	Solde commercial
+DOM	Domestique
+DOM_HCN	Dommestique - consommation humaine
+DOM_IND	Dommestique - utilisation industrielle
+DOM_IND_BIO	Dommestique - utilisation industrielle de bioéthanol ou de biocarburant
+DOM_ANF	Dommestique - alimentation animale
+DOM_CRU	Dommestique - trituration
+DOM_SEED	Dommestique - semences
+DOM_LOSS	Dommestique - pertes
+ADJ	Autres ajustements
+TRN	Transactions
+M1	Billets et pièces en circulation et dépôts à vue
+M2	Billets et pièces en circulation et dépôts à vue (M1) plus dépôts à terme d’une durée inférieure ou égale à 2 ans et dépôts remboursables avec un préavis inférieur ou égal à 3 mois
+M3	Billets et pièces en circulation et dépôts à vue (M1) plus dépôts à terme d’une durée inférieure ou égale à 2 ans et dépôts remboursables avec un préavis inférieur ou égal à 3 mois (M2) plus contrats de rachat et titres d'organismes de placement collectif monétaires (OPC monétaires) et titres de créances d’une durée inférieure ou égale à 2 ans
+STK	Stock
+STK_OP	Stock d'ouverture
+STK_CL	Stock de clôture
+STKCL_CG	Stock final - gaz coussin
+STKOP_EUE	Stock initial - urgence de l'UE
+STKCL_EUE	Stock final - urgence de l'UE
+STKOP_NAT	Stock initial - territoire national
+STKCL_NAT	Stock final - territoire national
+STKOP_JAN_NAT	Stock initial - janvier - territoire national
+STKCL_DEC_NAT	Stock final - décembre - territoire national
+STKOP_EUE_NAT	Stock initial - urgence de l'UE - territoire national
+STKCL_EUE_NAT	Stock final - urgence de l'UE - territoire national
+STKOP_C_OTH_OA	Stock initial - détenu pour d'autres pays dans le cadre d'un accord officiel
+STKCL_C_OTH_OA	Stock final - détenu pour d'autres pays dans le cadre d'un accord officiel
+STKOP_EUE_EU_OTH_OA	Stock initial - urgence de l'UE - détenu pour d'autres États membres de l'UE dans le cadre d'un accord officiel
+STKCL_EUE_EU_OTH_OA	Stock final - urgence de l'UE - détenu pour d'autres États membres de l'UE dans le cadre d'un accord officiel
+STKCL_C_OTH_OA_TKT	Stock final - détenu pour d'autres pays dans le cadre d'un accord officiel - dont « stock tickets »
+STKOP_KFD	Stock initial - à destination étrangère connue
+STKCL_KFD	Stock final - à destination étrangère connue
+STKOP_EUE_KFDEU	Stock initial - urgence de l'UE - à destination étrangère UE connue
+STKCL_EUE_KFDEU	Stock final - urgence de l'UE - à destination étrangère UE connue
+STKOP_BAXC_OTH_OA_KFD	Stock initial - détenu dans des zones franches, hors stocks détenus pour d'autres pays dans le cadre d'un accord officiel et stocks à destination étrangère connue
+STKCL_BAXC_OTH_OA_KFD	Stock final - détenu dans des zones franches, hors stocks détenus pour d'autres pays dans le cadre d'un accord officiel et stocks à destination étrangère connue
+STKOP_MCL	Stock initial - détenu par des consommateurs majeurs, tenus par la loi
+STKCL_MCL	Stock final - détenu par des consommateurs majeurs, tenus par la loi
+STKOP_OV	Stock initial - détenu à bord de navires océaniques entrants au port ou à l'amarre
+STKCL_OV	Stock final - détenu à bord de navires océaniques entrants au port ou à l'amarre
+STKOP_NAT_GOV	Stock initial - détenu par le gouvernement sur le territoire national
+STKCL_NAT_GOV	Stock final - détenu par le gouvernement sur le territoire national
+STKOP_EUE_NAT_GOV	Stock initial - urgence de l'UE - détenu par le gouvernement sur le territoire national
+STKCL_EUE_NAT_GOV	Stock final - urgence de l'UE - détenu par le gouvernement sur le territoire national
+STKOP_NAT_SHO	Stock initial - détenu par une entreprise de stockage sur le territoire national
+STKCL_NAT_SHO	Stock final - détenu par une entreprise de stockage sur le territoire national
+STKOP_EUE_NAT_CSE	Stock initial - urgence de l'UE - détenu par l'Entité Centrale de Stockage (ECS) sur le territoire national
+STKCL_EUE_NAT_CSE	Stock final - urgence de l'UE - détenu par l'Entité Centrale de Stockage (ECS) sur le territoire national
+STKOP_NAT_OTH	Stock initial - autre stock détenu sur le territoire national
+STKCL_NAT_OTH	Stock final - autre stock détenu sur le territoire national
+STKOP_EUE_NAT_EO	Stock initial - urgence de l'UE - détenu par des opérateurs économiques sur le territoire national
+STKCL_EUE_NAT_EO	Stock final - urgence de l'UE - détenu par des opérateurs économiques sur le territoire national
+STKOP_EUE_NAT_CEO_DIR	Stock initial - urgence de l'UE - stocks commerciaux détenus par des opérateurs économiques sur le territoire national en accord avec la Directive 2009/119/CE
+STKCL_EUE_NAT_CEO_DIR	Stock final - urgence de l'UE - stocks commerciaux détenus par des opérateurs économiques sur le territoire national en accord avec la Directive 2009/119/CE
+STKOP_ABR	Stock initial - détenu à l'étranger
+STKCL_ABR	Stock final - détenu à l'étranger
+STKCL_ABR_GOV_CSE	Stock final - détenu à l'étranger - dont conformément au gouvernement - délégation ECS
+STKOP_ABR_OA	Stock initial - détenu à l'étranger dans le cadre d'un accord officiel
+STKCL_ABR_OA	Stock final - détenu à l'étranger dans le cadre d'un accord officiel
+STKCL_ABR_OA_TKT	Stock final - détenu à l'étranger dans le cadre d'un accord officiel - dont « stock tickets »
+STKOP_EUE_ABR_EU_OTH_OA	Stock initial - urgence de l'UE - détenu à l'étranger dans d'autres États membres dans le cadre d'un accord officiel
+STKCL_EUE_ABR_EU_OTH_OA	Stock final - urgence de l'UE - détenu à l'étranger dans d'autres États membres dans le cadre d'un accord officiel
+STKOP_ABR_OA_GOV	Stock initial - stocks gouvernementaux détenus à l'étranger dans le cadre d'un accord officiel
+STKCL_ABR_OA_GOV	Stock final - stocks gouvernementaux détenus à l'étranger dans le cadre d'un accord officiel
+STKOP_ABR_OA_SHO	Stock initial - stocks d'entreprises détenus à l'étranger dans le cadre d'un accord officiel
+STKCL_ABR_OA_SHO	Stock final - stocks d'entreprises détenus à l'étranger dans le cadre d'un accord officiel
+STKOP_ABR_OA_OTH	Stock initial - autre stock détenu à l'étranger dans le cadre d'un accord officiel
+STKCL_ABR_OA_OTH	Stock final - autre stock détenu à l'étranger dans le cadre d'un accord officiel
+STKOP_ABR_IMP	Stock initial - détenu à l'étranger - définitivement désigné pour importation dans votre pays
+STKCL_ABR_IMP	Stock final - détenu à l'étranger - définitivement désigné pour importation dans votre pays
+STKOP_EUE_EU_OTH_IMP	Stock initial - urgence de l'UE - détenu à l'étranger dans l'UE, définitivement désigné pour importation dans votre pays
+STKCL_EUE_EU_OTH_IMP	Stock final - urgence de l'UE - détenu à l'étranger dans l'UE, définitivement désigné pour importation dans votre pays
+STKOP_BA	Stock initial - autres dans des zones franches
+STKCL_BA	Stock final - autres dans des zones franches
+STKOP_PF	Stock initial - contenu des oléoducs
+STKCL_PF	Stock final - contenu des oléoducs
+STK_EUE_MTH	Méthode pour les stocks d'urgence détenus par les États membres
+STK_EUE_DIR	Stocks d'urgence détenus par les États membres en accord avec la Directive UE (en jours équivalent)
+STK_EUE_DNY_MTH	Méthode de déduction pour le rendement du naphte - urgence de l'UE
+STK_EUE_MIN_MTH	Méthode de calcul du niveau de stock minimal - urgence de l'UE
+IMP_DNC	Importations journalières nettes pour conformité
+IC_DC	Consommation intérieure journalière pour conformité
+NETIMP_ICC_CAL	Importations journalières nettes ou consommation intérieure journalière pour conformité - calculées
+OBL_MTH_CAL	Méthode de calcul de l'obligation - calculée
+STK_MIN_CAL	Niveau de stock minimal pour conformité - calculé
+MRGO	Production brute des raffineries (somme des chiffres mensuels)
+MRF	Combustibles de raffinerie (somme des chiffres mensuels)
+MIMP	Importations (somme des chiffres mensuels)
+MEXP	Exportations (somme des chiffres mensuels)
+MRI_CAL	Entrées en raffinerie - calculées (somme des chiffres mensuels)
+MINTMARB	Soutages maritimes internationaux (somme des chiffres mensuels)
+MGID_OBS	Livraisons intérieures brutes (somme des chiffres mensuels)
+MBKFLOW	Retours aux raffineries (somme des chiffres mensuels)
+STK_BMY	Stock au début de la campagne de commercialisation
+STK_EMY	Stock à la fin de la campagne de commercialisation
+STK_CHG	Variation de stock
+STK_GRS	Stock brut
+STK_NET	Stock net
+FLOW_GRS	Flux brut
+FLOW_NET	Flux net
+EXPN	Dépense
+INC	Revenu
+SAV	Épargne
+WLTH_NET	Patrimoine net
+INCR	Augmentation
+DECR	Réduction
+NAI	Accroissement annual net
+RMOV	Quantités enlevées
+LOSS	Pertes
+LOSS_MEUR	Pertes - millions d'euros
+LOSS_MET	Pertes dues à des événements météorologiques
+LOSS_MET_MEUR	Pertes dues à des événements météorologiques - millions d'euros
+LOSS_HYD	Pertes dues à des événements hydrologiques
+LOSS_HYD_MEUR	Pertes dues à des événements hydrologiques - millions d'euros
+LOSS_CLIM	Pertes dues à des événements climatologiques
+LOSS_CLIM_MEUR	Pertes dues à des événements climatologiques - millions d'euros
+LOSS_AVG30Y_MEUR	Pertes moyennes sur 30 ans - millions d’euros
+LOSS_AVG30Y_EUR_HAB	Pertes moyennes sur 30 ans - euro par habitant
+ENT	Entrées
+EXIT	Sorties
+IN	Entrants
+OUT	Sortants
+PAID	Payé
+RECV	Reçu
+SUP	Ressource
+USE	Emploi
+USE_TRS	Emploi transformation
+USE_END	Emploi final
+ER_USE	Emploi générant des émissions
+BL	Liaisons en amont
+FL	Liaisons en aval
+REVAL	Réévaluation
+RCLAS	Reclassification statistique
+II	Revenu net des IDE en entrants
+IO	Revenu net des IDE en sortants
+NI	Flux net des IDE entrants
+NI_LE	Flux net des IDE entrants - positions en fin de période
+NO	Flux net des IDE sortants
+NO_LE	Flux net des IDE sortants - positions en fin de période
+K3-K6	Autres flux: destructions d'actifs dues à des catastrophes, saisies sans compensation, autres changements de volume non classés ailleurs et changements de classement
+KA	Autres changements de volume
+K7	Gains/pertes nominaux de détention
+A_LE	Avoirs - positions en fin de période
+A_K7A	Avoirs - réévaluations dues aux taux de changes
+A_K7B	Avoirs - réévaluations dues aux autres changement de prix
+A_KA	Avoirs - autres changements dans le volume des Actifs/Passifs
+L_LE	Engagements - positions en fin de période
+L_K7A	Engagements - réévaluations dues aux taux de changes
+L_K7B	Engagements - réévaluations dues aux autres changement de prix
+L_KA	Engagements - autres changements dans le volume des Actifs/Passifs
+N_LE	Positions nettes (avoirs - engagements) en fin de période
+N_K7A	Réévaluations nettes dues aux taux de changes
+N_K7B	Réévaluations nettes dues aux autres changement de prix
+N_KA	Autres changements nets dans le volume des Actifs/Passifs
+NE_LE	Engagements nets (engagements - avoirs) en fin de période
+HUMD_PC	Humidité (%)
+NSP	Non spécifié
+UNK	Inconnu

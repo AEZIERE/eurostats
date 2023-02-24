@@ -1,0 +1,21 @@
+S1	Economie totale
+S11	Sociétés non financières
+S121	Banque centrale
+S12T	Institutions de dépôts (banque centrale exclue) et fonds d'investissement monétaires
+S122	Institutions de dépôts (banque centrale exclue)
+S123	Fonds d'investissement monétaires
+S124	Fonds d’investissement non monétaires
+S13	Administrations publiques
+S1P	Autres secteurs que IFM et administration publiques
+S12M	Sociétés financières autres que institutions de dépôts et fonds d'investissement monétaires
+S1V	Sociétés non financières; ménages; institutions sans but lucratif au service des ménages
+S1M	Ménages et institutions sans but lucratif au service des ménages
+S1A	Affiliés
+S1W	Autres secteurs que administrations publiques
+S1Z	Autres secteurs que institutions de dépôts et administrations publiques
+S1X	Autorités monétaires
+S12R	Autres sociétés financières
+S1N	Non classé
+S12K	Institutions de dépôts et fonds d'investissement monétaires
+S12Q	Sociétés d’assurance et des fonds de pension
+S12O	Autres intermédiaires financiers

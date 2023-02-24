@@ -1,0 +1,6 @@
+NSA	Données non ajustées (c.à.d. ni désaisonnalisées ni corrigées des effets de calendrier)
+SA	Données désaisonnalisées, données non corrigées des effets de calendrier
+CA	Données corrigées des effets de calendrier, données non désaisonnalisées
+SCA	Données désaisonnalisées et corrigées des effets de calendrier
+TC	Données tendance-cycle
+NAP	Non applicable

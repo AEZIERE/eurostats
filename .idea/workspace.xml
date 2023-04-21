@@ -204,7 +204,8 @@
       <workItem from="1679297132559" duration="13245000" />
       <workItem from="1679386668120" duration="55211000" />
       <workItem from="1681463591390" duration="18323000" />
-      <workItem from="1682058022528" duration="1829000" />
+      <workItem from="1682058022528" duration="2916000" />
+      <workItem from="1682063038143" duration="6020000" />
     </task>
     <servers />
   </component>
@@ -225,7 +226,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eurostats$pytest_in_insert_data_py.coverage" NAME="pytest in insert_data.py Coverage Results" MODIFIED="1679407698243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eurostats$main.coverage" NAME="main Coverage Results" MODIFIED="1681734775290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/eurostats$insert_data.coverage" NAME="insert_data Coverage Results" MODIFIED="1682059995352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eurostats$insert_data.coverage" NAME="insert_data Coverage Results" MODIFIED="1682088196794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eurostats$make_meta_all.coverage" NAME="make_meta_all Coverage Results" MODIFIED="1679591782800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script_libelle" />
     <SUITE FILE_PATH="coverage/eurostats$script.coverage" NAME="make_table_time Coverage Results" MODIFIED="1679303213572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script_libelle" />
   </component>

@@ -34,37 +34,6 @@ def create_table(name_table, columns):
             conn.commit()
 
 
-
-
-def select_id_meta(data_flow, last_update, freq, unit):
-    with bdd_connection() as conn:
-        cur = conn.cursor()
-
-        select_id_meta = "SELECT id FROM public.metadata WHERE data_flow = %s AND last_update = %s AND freq = %s AND code_unit = %s"
-        cur.execute(select_id_meta, (data_flow, last_update, freq, unit))
-        db_row = cur.fetchone()
-
-        return db_row
-
-
-def select_id_time(freq, string):
-    with bdd_connection() as conn:
-        cur = conn.cursor()
-
-        name_freq = enum_freq[freq].value
-        annee, other = string.split("-")
-        name_id = "id_" + name_freq
-        if 'Q' in other:
-            other = other.replace('Q', '')
-
-        select_id_time = f"""SELECT {name_id} FROM public.temporel WHERE annee = %s AND {name_freq} = %s"""
-        cur.execute(select_id_time, (annee, other))
-
-        db_row = cur.fetchone()
-
-        return db_row
-
-
 # search in file csv for boost time of insert
 def search_id_meta_csv(data_flow, last_update, freq, unit):
 
@@ -102,23 +71,6 @@ def search_id_time_csv(freq, string):
             return df[name_id].values[0]
 
 
-def return_id(conn, cur, row):
-    id_meta = select_id_meta(row['DATAFLOW'], row['LAST UPDATE'], row['freq'], row['unit'])
-    id_time = select_id_time(row['freq'], row['TIME_PERIOD'])
-
-    if id_meta is None:
-        cur.execute(insert_data(name_table="metadata", data_flow=row['DATAFLOW'], last_update=row['LAST UPDATE'],
-                                freq=row['freq'], code_unit=row['unit']))
-        conn.commit()
-        id_meta = select_id_meta(row['DATAFLOW'], row['LAST UPDATE'], row['freq'], row['unit'])
-
-    if id_time is None:
-        id_time = "XXXX"
-    id_meta = id_meta[0]
-    id_time = id_time[0]
-    return id_meta, id_time
-
-
 def add_row_csv(name, data):
     df = pd.read_csv("../File csv eurostats/csv/search_for_insert/" + name + ".csv", sep=",")
     last_id = df['id'].iloc[-1]
@@ -130,75 +82,12 @@ def add_row_csv(name, data):
     global df_meta
     df_meta = pd.read_csv("../File csv eurostats/csv/search_for_insert/metadata.csv", sep=",")
 
-def requete_insert_all(tab):
-    if len(tab[0]) == 6:
-        argument_string = ",".join(
-            "('%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y) for (a, z, e, r, t, y) in tab)
-    elif len(tab[0]) == 5:
-        argument_string = ",".join(
-            "('%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t) for (a, z, e, r, t) in tab)
-    elif len(tab[0]) == 4:
-        argument_string = ",".join("('%s', '%s', '%s', '%s')" % (a, z, e, r) for (a, z, e, r) in tab)
-    elif len(tab[0]) == 7:
-        argument_string = ",".join(
-            "('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y, u) for (a, z, e, r, t, y, u) in tab)
-    elif len(tab[0]) == 8:
-        argument_string = ",".join(
-            "('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y, u, i) for (a, z, e, r, t, y, u, i)
-            in
-            tab)
-    return argument_string
-
 
 # *--------------------------*#
 
 # Functions return row to insert in table
 
 # *--------------------------*#
-
-def global_insert_all(conn, cur, row):
-    id_meta, id_time = return_id(conn, cur, row)
-
-    # test value is not nan
-    if row['OBS_VALUE'] == "nan":
-        row['OBS_VALUE'] = 0
-    if math.isnan(row['OBS_VALUE']):
-        row['OBS_VALUE'] = 0
-
-    return (id_meta, id_time, row['indic'], row['nace_r2'], row['geo'], row['OBS_VALUE'])
-
-
-def insert_dataByCol(**kwargs):
-    """create string of data to insert in table
-    :param kwargs: name_table, columns, values
-    :return: insert : string
-
-    """
-    kwargs_filtered = {k: "'" + v + "'" if isinstance(v, str) else v for k, v in kwargs.items() if
-                       k != 'name_table'}
-    liste_col, liste_val = zip(*kwargs_filtered.items())
-
-    insert = """INSERT INTO public.{table} ({columns}) VALUES ({values})""".format(
-        table=kwargs['name_table'],
-        columns=", ".join(liste_col),
-        values=", ".join(str(val) for val in liste_val)
-    )
-    print(insert)
-    return insert
-
-
-def insert_all(conn, cur, row):
-    id_meta, id_time = return_id(conn, cur, row)
-    # test value is not nan
-    if row['OBS_VALUE'] == "nan":
-        row['OBS_VALUE'] = 0
-    if math.isnan(row['OBS_VALUE']):
-        row['OBS_VALUE'] = 0
-
-    cur.execute(insert_data(name_table="secteur_industrie", id_meta=id_meta, id_time=id_time, code_indic=row['indic'],
-                            code_nace_r2=row['nace_r2'], code_geo=row['geo'], value=row['OBS_VALUE']))
-
-    conn.commit()
 
 
 def insert_data_csv(row):
@@ -223,7 +112,7 @@ def insert_data_csv(row):
         row['OBS_VALUE'] = 0
     # print(id_meta, id_time, row['indic_ag'], row['itm_newa'], row['geo'], row['OBS_VALUE'])
     return (
-    id_meta, id_time, row['geo'],row['OBS_VALUE'])
+    id_meta, id_time, row['age'], row['sex'], row['wstatus'], row['nace_r2'], row['geo'],row['OBS_VALUE'])
 
 
 # *--------------------------*#
@@ -233,7 +122,7 @@ def insert_data_csv(row):
 # *--------------------------*#
 def main_insert_engine():
     path = "../File csv eurostats/csv/all/"
-    df = pd.read_csv(path + 'demo_r_d3dens_linear.csv')
+    df = pd.read_csv(path + 'cens_11empn_r2_linear.csv')
 
     # Trie des données
     # tab = ["NSA", "SA"]
@@ -244,8 +133,8 @@ def main_insert_engine():
     time_start = time.time()
 
     # create table and columns
-    name_table = "demographie"
-    columns = ["id_meta", "id_annee", "code_geo", "value"]
+    name_table = "population_emploi"
+    columns = ["id_meta", "id_annee","code_age", "code_sex", "code_wstatus", "code_nace_r2", "code_geo", "value"]
     create_table(name_table, columns)
 
     with engine_conn() as conn:

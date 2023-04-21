@@ -6,13 +6,32 @@ import pandas as pd
 
 from config import bdd_connection, engine_conn
 
-df_meta = pd.read_csv("../File csv eurostats/csv//search_for_insert/metadata.csv", sep=";")
-df_time = pd.read_csv("../File csv eurostats/csv//search_for_insert/temporel.csv", sep=";")
+df_meta = pd.read_csv("../File csv eurostats/csv/search_for_insert/metadata.csv", sep=",")
+df_time = pd.read_csv("../File csv eurostats/csv/search_for_insert/temporel.csv", sep=";")
+
+
 class enum_freq(Enum):
     A = "annee"
     S = "semestre"
     Q = "trimestre"
     M = "mois"
+
+
+def create_table(name_table, columns):
+    with bdd_connection() as conn:
+        cur = conn.cursor()
+
+        create_table = f"""CREATE TABLE IF NOT EXISTS public.{name_table} ()"""
+        cur.execute(create_table)
+        conn.commit()
+        # alter table
+        alter_table = f"""ALTER TABLE public.{name_table} ADD COLUMN IF NOT EXISTS id serial PRIMARY KEY"""
+        cur.execute(alter_table)
+        conn.commit()
+        for column in columns:
+            alter_table = f"""ALTER TABLE public.{name_table} ADD COLUMN IF NOT EXISTS {column} varchar(255)"""
+            cur.execute(alter_table)
+            conn.commit()
 
 
 
@@ -26,6 +45,8 @@ def select_id_meta(data_flow, last_update, freq, unit):
         db_row = cur.fetchone()
 
         return db_row
+
+
 def select_id_time(freq, string):
     with bdd_connection() as conn:
         cur = conn.cursor()
@@ -43,20 +64,25 @@ def select_id_time(freq, string):
 
         return db_row
 
+
 # search in file csv for boost time of insert
 def search_id_meta_csv(data_flow, last_update, freq, unit):
-    #df = pd.read_csv("csv/search_for_insert/metadata.csv", sep=";")
+
     if unit == "":
-        df= df_meta[(df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (df_meta['freq'] == freq)]
+        df = df_meta[
+            (df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (df_meta['freq'] == freq)]
     else:
-        df = df_meta[(df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (df_meta['freq'] == freq) & (
-                df_meta['code_unit'] == unit)]
+        df = df_meta[(df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (
+                    df_meta['freq'] == freq) & (
+                             df_meta['code_unit'] == unit)]
     if df.empty:
         return None
     else:
         return df['id'].values[0]
+
+
 def search_id_time_csv(freq, string):
-    #df = pd.read_csv("csv/search_for_insert/temporel.csv", sep=";")
+    # df = pd.read_csv("csv/search_for_insert/temporel.csv", sep=";")
 
     name_freq = enum_freq[freq].value
     if name_freq == "annee":
@@ -94,18 +120,41 @@ def return_id(conn, cur, row):
 
 
 def add_row_csv(name, data):
-    df = pd.read_csv("csv/search_for_insert/" + name + ".csv")
-    last_id = df.iloc[-1]['id']
+    df = pd.read_csv("../File csv eurostats/csv/search_for_insert/" + name + ".csv", sep=",")
+    last_id = df['id'].iloc[-1]
     data.insert(0, last_id + 1)
     df.loc[len(df.index)] = data
-    df.to_csv("csv/search_for_insert/" + name + ".csv", index=False)
 
+    df.to_csv("../File csv eurostats/csv/search_for_insert/" + name + ".csv", index=False)
+
+    global df_meta
+    df_meta = pd.read_csv("../File csv eurostats/csv/search_for_insert/metadata.csv", sep=",")
 
 def requete_insert_all(tab):
-    argument_string = ",".join(
-        "('%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y) for (a, z, e, r, t, y) in tab)
+    if len(tab[0]) == 6:
+        argument_string = ",".join(
+            "('%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y) for (a, z, e, r, t, y) in tab)
+    elif len(tab[0]) == 5:
+        argument_string = ",".join(
+            "('%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t) for (a, z, e, r, t) in tab)
+    elif len(tab[0]) == 4:
+        argument_string = ",".join("('%s', '%s', '%s', '%s')" % (a, z, e, r) for (a, z, e, r) in tab)
+    elif len(tab[0]) == 7:
+        argument_string = ",".join(
+            "('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y, u) for (a, z, e, r, t, y, u) in tab)
+    elif len(tab[0]) == 8:
+        argument_string = ",".join(
+            "('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (a, z, e, r, t, y, u, i) for (a, z, e, r, t, y, u, i)
+            in
+            tab)
     return argument_string
 
+
+# *--------------------------*#
+
+# Functions return row to insert in table
+
+# *--------------------------*#
 
 def global_insert_all(conn, cur, row):
     id_meta, id_time = return_id(conn, cur, row)
@@ -117,6 +166,8 @@ def global_insert_all(conn, cur, row):
         row['OBS_VALUE'] = 0
 
     return (id_meta, id_time, row['indic'], row['nace_r2'], row['geo'], row['OBS_VALUE'])
+
+
 def insert_dataByCol(**kwargs):
     """create string of data to insert in table
     :param kwargs: name_table, columns, values
@@ -134,6 +185,8 @@ def insert_dataByCol(**kwargs):
     )
     print(insert)
     return insert
+
+
 def insert_all(conn, cur, row):
     id_meta, id_time = return_id(conn, cur, row)
     # test value is not nan
@@ -152,8 +205,6 @@ def insert_data_csv(row):
     if "unit" not in row:
         row['unit'] = ""
     id_meta = search_id_meta_csv(row['DATAFLOW'], row['LAST UPDATE'], row['freq'], row['unit'])
-    if row['freq'] != "A":
-        print("probleme")
     id_time = search_id_time_csv(row['freq'], row['TIME_PERIOD'])
 
     if id_meta is None:
@@ -170,57 +221,49 @@ def insert_data_csv(row):
         row['OBS_VALUE'] = 0
     if row['OBS_VALUE'] == '':
         row['OBS_VALUE'] = 0
-    #print(id_meta, id_time, row['indic_ag'], row['itm_newa'], row['geo'], row['OBS_VALUE'])
-    return (id_meta, id_time, row['nace_r2'], row['s_adj'], row['na_item'], row['geo'], row['OBS_VALUE'])
+    # print(id_meta, id_time, row['indic_ag'], row['itm_newa'], row['geo'], row['OBS_VALUE'])
+    return (
+    id_meta, id_time, row['geo'],row['OBS_VALUE'])
 
-def secteur_industrie_engine():
+
+# *--------------------------*#
+
+# Functions main read, sort, insert data in table
+
+# *--------------------------*#
+def main_insert_engine():
     path = "../File csv eurostats/csv/all/"
-    df = pd.read_csv(path + 'namq_10_a64_e_linear.csv')
-    #tab = ["NSA", "SCA"]
-    #df = df[df['s_adj'].isin(tab)]
+    df = pd.read_csv(path + 'demo_r_d3dens_linear.csv')
+
+    # Trie des données
+    # tab = ["NSA", "SA"]
+    # df = df[df['s_adj'].isin(tab)]
+
     print(len(df.index))
+
     time_start = time.time()
+
+    # create table and columns
+    name_table = "demographie"
+    columns = ["id_meta", "id_annee", "code_geo", "value"]
+    create_table(name_table, columns)
 
     with engine_conn() as conn:
         # Methode 3
         for i in range(0, len(df.index), 50000):
             time_start_loop = time.time()
+
             df_insert = df.iloc[i:i + 50000].apply(lambda row: pd.Series(insert_data_csv(row)), axis=1)
-            #df_insert = df.apply(lambda row: pd.Series(insert_data_csv(row)), axis=1)
-            df_insert.columns = ['id_meta', 'id_annee', "code_nace_r2", "code_s_adj", "code_na_item",'code_geo', 'value']
-            df_insert.to_sql('agriculture', conn, if_exists='append', index=False)
+            # df_insert = df.apply(lambda row: pd.Series(insert_data_csv(row)), axis=1)
+            df_insert.columns = columns
+
+            df_insert.to_sql(name_table, conn, if_exists='append', index=False)
             conn.commit()
             print("time : ", time.time() - time_start_loop)
 
-        print("time : ", time.time() - time_start)
+        print("time end : ", time.time() - time_start)
 
-
-def secteur_industrie():
-    path = "../File csv eurostats/csv/all/"
-    df = pd.read_csv(path + 'namq_10_a10_linear.csv')
-    tab = ["NSA", "SCA"]
-    df = df[df['s_adj'].isin(tab)]
-
-    time_start = time.time()
-    with bdd_connection() as conn:
-        cur = conn.cursor()
-        # Methode 1
-        # [insert_all(conn, cur, row) for index, row in df.iterrows() ]
-
-        # Methode 2
-        print(len(df.index))
-        tab_rows = [insert_data_csv(index, row) for index, row in df.iterrows()]
-
-        #df = pd.DataFrame(tab_rows)
-        #df.to_csv("csv/search_for_insert/secteur_industrie.csv", index=False, header=False)
-        #print("save csv")
-
-        argument_string = requete_insert_all(tab_rows)
-        cur.execute("INSERT INTO {table} (id_meta, id_trimestre, code_s_adj, code_nace_r2, code_na_item, code_geo, value  ) VALUES".format(table="secteur_industrie") + argument_string)
-        conn.commit()
-
-    print("done {ecart} seconde".format(ecart=time.time() - time_start))
 
 
 if __name__ == '__main__':
-    secteur_industrie_engine()
+    main_insert_engine()

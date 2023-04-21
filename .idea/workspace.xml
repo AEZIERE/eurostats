@@ -5,79 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30d26ce8-8037-4939-9af1-f83411bc709f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Commerce inter bien/ds-045409$defaultview_linear.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Commerce inter bien/ds-045409$defaultview_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/nama_10_a64_e_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/nama_10_a64_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/nama_10_fte_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/nama_10r_3gdp_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/namq_10_a10_e_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/namq_10_a10_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Finance et Eco/namq_10_lp_ulc_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/agr_r_accts_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_bsin_m_r2_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_bsin_q_r2_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_bssi_m_r2_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_eteu27_2020_m_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_isen_m_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_isin_m_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/ei_isir_m_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/nama_10_gdp_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/namq_10_a10_e_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/namq_10_a10_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/namq_10_exi_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_eurostat/Stats general et region/namq_10_fcs_linear.csv.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_ASSET10_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_BOP_ITEM_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_CURRENCY_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_FREQ_en.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_FREQ_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_GEO_en.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_GEO_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_INDIC_AG_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_INDIC_en.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_INDIC_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_ITM_NEWA_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_NACE_R2_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_NA_ITEM_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_OBS_FLAG_en.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_OBS_FLAG_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_PARTNER_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_SECTOR10_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_SECTPART_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_STK_FLOW_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_S_ADJ_en.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_S_ADJ_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle/ESTAT_UNIT_fr.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/agr_r_accts__custom_4966424_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bpm6ca_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bpm6fa_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bpm6fa_q$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bpm6iip_q$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bsco_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bsco_q$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bsin_m_r2$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_bssi_m_r2$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_etea19_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_eteu27_2020_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_isen_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_isin_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/ei_isir_m$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/nama_10_a64$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/nama_10_a64_e$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/nama_10_gdp__custom_4964690_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/nama_10_nfa_fl$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/nama_10r_2coe$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_a10__custom_4965797_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_a10_e$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_a10_e__custom_4966186_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_exi$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_exi__custom_4965493_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_fcs__custom_4965204_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/libelle_code/namq_10_lp_ulc$defaultview_codelists_tab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_libelle/out.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ff9fa99-8124-4a18-b2fa-a55a4105af74.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ff9fa99-8124-4a18-b2fa-a55a4105af74.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ff9fa99-8124-4a18-b2fa-a55a4105af74/storage_v2/_src_/database/eurostats.0mFkSw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ff9fa99-8124-4a18-b2fa-a55a4105af74/storage_v2/_src_/database/eurostats.0mFkSw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insert_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,29 +35,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "last_opened_file_path": "/Users/apeziere/Desktop/eurostats/csv/all",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "debugger.dataViews.python.type.renderers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/apeziere/Desktop/eurostats/csv/all&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;debugger.dataViews.python.type.renderers&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "GenericSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;GenericSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/csv/all" />
@@ -271,7 +202,9 @@
       <workItem from="1679038808021" duration="1994000" />
       <workItem from="1679051831729" duration="7535000" />
       <workItem from="1679297132559" duration="13245000" />
-      <workItem from="1679386668120" duration="47508000" />
+      <workItem from="1679386668120" duration="55211000" />
+      <workItem from="1681463591390" duration="18323000" />
+      <workItem from="1682058022528" duration="1829000" />
     </task>
     <servers />
   </component>
@@ -291,8 +224,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eurostats$pytest_in_insert_data_py.coverage" NAME="pytest in insert_data.py Coverage Results" MODIFIED="1679407698243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/eurostats$main.coverage" NAME="main Coverage Results" MODIFIED="1679653734314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/eurostats$insert_data.coverage" NAME="insert_data Coverage Results" MODIFIED="1679653936547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eurostats$main.coverage" NAME="main Coverage Results" MODIFIED="1681734775290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eurostats$insert_data.coverage" NAME="insert_data Coverage Results" MODIFIED="1682059995352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eurostats$make_meta_all.coverage" NAME="make_meta_all Coverage Results" MODIFIED="1679591782800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script_libelle" />
     <SUITE FILE_PATH="coverage/eurostats$script.coverage" NAME="make_table_time Coverage Results" MODIFIED="1679303213572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script_libelle" />
   </component>

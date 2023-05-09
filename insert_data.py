@@ -36,13 +36,12 @@ def create_table(name_table, columns):
 
 # search in file csv for boost time of insert
 def search_id_meta_csv(data_flow, last_update, freq, unit):
-
     if unit == "":
         df = df_meta[
             (df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (df_meta['freq'] == freq)]
     else:
         df = df_meta[(df_meta['data_flow'] == data_flow) & (df_meta['last_update'] == last_update) & (
-                    df_meta['freq'] == freq) & (
+                df_meta['freq'] == freq) & (
                              df_meta['code_unit'] == unit)]
     if df.empty:
         return None
@@ -90,7 +89,7 @@ def add_row_csv(name, data):
 # *--------------------------*#
 
 
-def insert_data_csv(row):
+def insert_data_csv(row, columns):
     if "unit" not in row:
         row['unit'] = ""
     id_meta = search_id_meta_csv(row['DATAFLOW'], row['LAST UPDATE'], row['freq'], row['unit'])
@@ -111,8 +110,23 @@ def insert_data_csv(row):
     if row['OBS_VALUE'] == '':
         row['OBS_VALUE'] = 0
     # print(id_meta, id_time, row['indic_ag'], row['itm_newa'], row['geo'], row['OBS_VALUE'])
-    return (
-    id_meta, id_time, row['age'], row['sex'], row['wstatus'], row['nace_r2'], row['geo'],row['OBS_VALUE'])
+
+    # make tuple with columns
+    tuple = ()
+    for column in columns:
+        if column == "id_meta":
+            tuple = tuple + (id_meta,)
+            continue
+        if column == "id_annee" or column == "id_semestre" or column == "id_trimestre" or column == "id_mois":
+            tuple = tuple + (id_time,)
+            continue
+        if column == "value":
+            tuple = tuple + (row['OBS_VALUE'],)
+            continue
+        column = column.replace("code_", "")
+        tuple = tuple + (row[column],)
+
+    return tuple
 
 
 # *--------------------------*#
@@ -120,9 +134,9 @@ def insert_data_csv(row):
 # Functions main read, sort, insert data in table
 
 # *--------------------------*#
-def main_insert_engine():
+def main_insert_engine(name_file, name_table, columns):
     path = "../File csv eurostats/csv/all/"
-    df = pd.read_csv(path + 'cens_11empn_r2_linear.csv')
+    df = pd.read_csv(path + name_file + '_linear.csv')
 
     # Trie des données
     # tab = ["NSA", "SA"]
@@ -132,9 +146,11 @@ def main_insert_engine():
 
     time_start = time.time()
 
+    #init columns
+
+
     # create table and columns
-    name_table = "population_emploi"
-    columns = ["id_meta", "id_annee","code_age", "code_sex", "code_wstatus", "code_nace_r2", "code_geo", "value"]
+
     create_table(name_table, columns)
 
     with engine_conn() as conn:
@@ -142,7 +158,7 @@ def main_insert_engine():
         for i in range(0, len(df.index), 50000):
             time_start_loop = time.time()
 
-            df_insert = df.iloc[i:i + 50000].apply(lambda row: pd.Series(insert_data_csv(row)), axis=1)
+            df_insert = df.iloc[i:i + 50000].apply(lambda row: pd.Series(insert_data_csv(row, columns)), axis=1)
             # df_insert = df.apply(lambda row: pd.Series(insert_data_csv(row)), axis=1)
             df_insert.columns = columns
 
@@ -153,6 +169,8 @@ def main_insert_engine():
         print("time end : ", time.time() - time_start)
 
 
-
 if __name__ == '__main__':
-    main_insert_engine()
+    name_file = 'educ_uoe_enra11'
+    name_table = "education"
+    columns = ["id_meta", "id_annee", "code_isced11", "code_sex", "code_geo", "value"]
+    main_insert_engine(name_file, name_table, columns)
